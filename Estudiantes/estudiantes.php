@@ -1,7 +1,7 @@
 <?php
-require_once("config.php");
+require_once("Estudiante.php");
 
-$data = new Config();
+$data = new Estudiante();
 
 $all = $data ->selectAll();
 
