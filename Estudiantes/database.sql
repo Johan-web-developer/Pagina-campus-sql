@@ -23,3 +23,4 @@ CREATE TABLE users(
     FOREIGN KEY (idCamper) REFERENCES campers(id)
 );
 
+USE campusv2;

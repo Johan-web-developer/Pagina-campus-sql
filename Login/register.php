@@ -14,10 +14,17 @@ if (isset($_POST['register'])) {
     $registrarse->setUsername($_POST['username']);
     $registrarse->setPassword($_POST['password']);
 
-    $registrarse-> insertData();
+    if ($registrarse->checkUser($_POST['email'])){
+        echo "<script> alert('el usuario ya existe');document.location='loginRegister.php'</script>";
+    }else{
+        $registrarse-> insertData();
+        echo "<script> alert('el usuario ha sido registrado existosamente');document.location='../Home/home.php'</script>";
+    }
+    
+    
 
     
-    echo "<script> alert('el usuario ha sido guardado satisfactoriamente');document.location='loginRegister.php'</script>";
+    
 }
 
 ?>

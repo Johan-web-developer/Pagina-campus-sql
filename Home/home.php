@@ -1,3 +1,12 @@
+
+<?php
+require_once("../Login/LoginUser.php");
+
+session_start();
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -26,7 +35,7 @@
       <div class="perfil">
         <h3 style="margin-bottom: 2rem;">Camp Skiller.</h3>
         <img src="images/Diseño sin título.png" alt="" class="imagenPerfil">
-        <h3 >Maicol Estrada</h3>
+        <h3 ><?php echo $_SESSION["username"]  ?></h3>
       </div>
       <div class="menus">
         <a href="home.php" style="display: flex;gap:2px;">

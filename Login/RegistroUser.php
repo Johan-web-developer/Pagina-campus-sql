@@ -8,6 +8,8 @@ error_reporting(E_ALL);
 
 require_once ('../Config/db.php');
 require_once ('../Config/conectar.php');
+require_once ('LoginUser.php');
+
 class RegistroUser extends Conectar{
     private $id;
     private $idCamper;
@@ -82,8 +84,16 @@ class RegistroUser extends Conectar{
     public function insertData(){
         try {
             $stm = $this->dbCnx->prepare("INSERT INTO users (idCamper, email, username, password) VALUES(?,?,?,?)");
-            $stm -> execute([$this->idCamper, $this->email, $this->username, md5($this->password)]);
+            $stm -> execute([$this->idCamper, $this->email, $this->username, MD5($this->password)]);
 
+            $login = new LoginUser();
+
+            $login -> setEmail($_POST['email']);
+            $login -> setPassword($_POST['password']);
+
+            $success = $login -> login();
+
+            
         } catch (Exception $e) {
             return $e->getMessage();
         }
