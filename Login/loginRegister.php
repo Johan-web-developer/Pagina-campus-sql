@@ -35,9 +35,9 @@
                     <div class="mb-3">
                     <label for="password" class="form-label">Contraseña</label>
                         <input 
-                          type="password"
-                          id="passsword"
-                          name="passsword"
+                          type="pasword"
+                          id="password"
+                          name="password"
                           class="form-control"  
                         />
                     </div>
