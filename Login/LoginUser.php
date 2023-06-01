@@ -12,10 +12,12 @@ class LoginUser extends Conectar{
     private $id;
     private $email;
     private $password;
+    private $username;
 
-    public function __construct($id=0, $email="",  $password="", $dbCnx=""){
+    public function __construct($id=0, $email="", $username="", $password="", $dbCnx=""){
         $this->id = $id;
         $this->email = $email;
+        $this->username = $username;
         $this->password = $password;
         parent::__construct($dbCnx);
     }
@@ -33,6 +35,14 @@ class LoginUser extends Conectar{
 
     public function setEmail($email){
         $this->email= $email;
+    }
+
+    public function getUsername(){
+        return $this->username;
+    }
+
+    public function setUsername($username){
+        $this->username= $username;
     }
 
     public function getPassword(){
@@ -63,6 +73,7 @@ class LoginUser extends Conectar{
                 $_SESSION['id'] = $user[0]['id'];
                 $_SESSION['email'] = $user[0]['email'];
                 $_SESSION['password'] = $user[0]['password'];
+                $_SESSION['username'] = $user[0]['username'];
                 return true;
             }else{
                 false;
