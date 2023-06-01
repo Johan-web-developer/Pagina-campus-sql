@@ -69,7 +69,15 @@ class RegistroUser extends Conectar{
     public function checkUser($email){
         try {
             $stm = $this->dbCnx->prepare("SELECT * FROM users WHERE email='$email'");
-            $stm = execute();
+            $stm -> execute();
+
+            $login = new  LoginUser();
+
+            $login  -> setEmail($_POST['email']);
+            $login  -> setPassword($_POST['password']);
+
+            $success = $login ->login();
+            
             if ($stm->fetchColumn()){
                 return true;
             }else{
