@@ -48,7 +48,7 @@ session_start();
         </a>
       
         </a>
-        <a href="/login/login.php" style="display: flex;gap:2px;color: brown;">
+        <a href="../Login/loginRegister.php" style="display: flex;gap:2px;color: brown;">
           <i class="bi bi-x-square"></i>
           <h3 style="margin: 0px;">salir</h3>
         </a>

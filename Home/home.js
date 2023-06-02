@@ -17,7 +17,7 @@ const getOptionCharts1 = () => {
           'Carlos',
           'Camila',
           'Marcela',
-          'Maicol',
+          'Johan',
           'Juan',
           'Jhon',
           'Jose',
@@ -50,7 +50,7 @@ const getOptionCharts1 = () => {
             { value: 775, name: 'Camilo' },
             { value: 775, name: 'Juan' },
             { value: 775, name: 'Ronald' },
-            { value: 679, name: 'Maicol', selected: true }
+            { value: 679, name: 'Johan', selected: true }
           ]
         },
         {
@@ -99,7 +99,7 @@ const getOptionCharts1 = () => {
             { value: 251, name: 'Pabon' },
             { value: 234, name: 'Miguel' },
             { value: 147, name: 'Vargas' },
-            { value: 135, name: 'Ronald' },
+            { value: 135, name: 'Johan' },
             { value: 102, name: 'Others' }
           ]
         }
